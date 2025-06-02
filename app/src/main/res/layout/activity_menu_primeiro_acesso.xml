@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".ViewsMenu.MenuPrimeiroAcesso">
+
+    <TextView
+        android:id="@+id/textBemVindo"
+        android:layout_width="376dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="BEM VINDO! AGORA VAI COMEÇAR A VIAGEM"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAviso"
+        android:layout_width="0dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="360dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="Você ainda não tem uma viagem cadastrada! Vamos cadastrar uma para começarmos! "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textBemVindo" />
+
+    <Button
+        android:id="@+id/btnCadastrarPrimeiraViagem"
+        android:layout_width="153dp"
+        android:layout_height="83dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/button_background_with_shadow"
+        android:text="Cadastrar Viagem"
+        android:textSize="20sp"
+        app:backgroundTint="@color/CorBotoes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAviso" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_png___copia" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

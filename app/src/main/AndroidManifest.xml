@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/final_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/final_logo"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ControleIoverland"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewsMenu.MenuPDF"
+            android:exported="false"
+            android:theme="@style/Theme.ControleIoverland" />
+        <activity
+            android:name=".ViewsMenu.MenuEncerrarViagem"
+            android:exported="false" />
+        <activity
+            android:name=".ViewsMenu.MenuDadosIcones"
+            android:exported="false" />
+        <activity
+            android:name=".ViewsMenu.MenuViagemIcones"
+            android:exported="false"
+            android:theme="@style/Theme.ControleIoverland" />
+        <activity android:name=".ViewsMenu.MenuDeViagens" />
+        <activity android:name=".ViewsMenu.MenuEstatisticas" />
+        <activity android:name=".Edits.EditViagemView" />
+        <activity android:name=".Edits.EditAbastecimentoView" />
+        <activity android:name=".Edits.EditAlimentacaoView" />
+        <activity android:name=".Edits.EditDespesaView" />
+        <activity android:name=".Edits.EditDiarioView" />
+        <activity android:name=".Edits.EditEstacionamentoView" />
+        <activity android:name=".Edits.EditHospedagemView" />
+        <activity android:name=".Edits.EditManutencaoView" />
+        <activity android:name=".Edits.EditPasseioView" />
+        <activity android:name=".Edits.EditPedagioView" />
+        <activity android:name=".ViewsMenu.MenuDadosViagem" />
+        <activity android:name=".ViewsMenu.MenuPrimeiroAcesso" />
+        <activity android:name=".Insert.insertViagemView" />
+        <activity android:name=".RecycleViews.AbastecimentoRecyclerView" />
+        <activity android:name=".RecycleViews.AlimentacaoRecyclerView" />
+        <activity android:name=".RecycleViews.DespesaRecyclerView" />
+        <activity android:name=".RecycleViews.DiarioRecyclerView" />
+        <activity android:name=".RecycleViews.EstacionamentoRecyclerView" />
+        <activity android:name=".RecycleViews.HospedagemRecyclerView" />
+        <activity android:name=".RecycleViews.ManutencaoRecyclerView" />
+        <activity android:name=".RecycleViews.PasseioRecyclerView" />
+        <activity android:name=".RecycleViews.PedagioRecyclerView" />
+        <activity android:name=".Insert.InsertPedagioView" />
+        <activity android:name=".Insert.InsertPasseioView" />
+        <activity android:name=".Insert.InsertDiarioView" />
+        <activity android:name=".Insert.InsertDespesaView" />
+        <activity android:name=".Insert.InsertAbastecimentoView" />
+        <activity android:name=".Insert.InsertAlimentacaoView" />
+        <activity android:name=".Insert.InsertEstacionamentoView" />
+        <activity android:name=".Insert.InsertHospedagemView" />
+        <activity android:name=".Insert.InsertManutencaoView" />
+        <activity
+            android:name=".ViewsMenu.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

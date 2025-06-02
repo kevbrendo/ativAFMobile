@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/anton"
+            android:text="- - -     ALIMENTAÇÃO     - - -"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="385dp"
+            android:layout_height="214dp"
+            android:layout_marginTop="4dp"
+            android:padding="16dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar6">
+
+            <TextView
+                android:id="@+id/textNomeViagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/anton"
+                android:paddingLeft="12dp"
+                android:text="Viagem: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textStatusViagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/anton"
+                android:paddingLeft="12dp"
+                android:paddingTop="0dp"
+                android:text="Status viagem:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textDataInicioViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="98dp"
+                android:fontFamily="@font/anton"
+                android:paddingLeft="12dp"
+                android:text="Data de inicio:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalPartidaViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/anton"
+                android:paddingLeft="12dp"
+                android:text="Local de partida:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textKilometragemPercorridaViagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="166dp"
+                android:fontFamily="@font/anton"
+                android:paddingLeft="12dp"
+                android:text="Kilometragem percorrida:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textDiasViajados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/anton"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:text="Dias viajados:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="380dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/BarChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <TextView
+                android:id="@+id/textAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Abastecimentos: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textAlimentacoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Alimentação: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textDespesas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="88dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Despesas gerais:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textEstacionamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="128dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Estacionamentos: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textHospedagens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="168dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Hospedagens:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textManutencoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="208dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Manutenção: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPasseios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="248dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Passeios: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPedagios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="288dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/anton"
+                android:text="Gastos com Pedágios: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMediaGastoDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="326dp"
+                android:fontFamily="@font/anton"
+                android:text="Media de gasto por dia:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar6"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:background="@color/CorBotoes"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:text="Estatisticas"
+            android:textColor="@color/color_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="96dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/CorBotoes"
+            android:text="Voltar"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:elevation="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/R" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="380dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+            <TextView
+                android:id="@+id/textQuantidadeAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de abastecimentos: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPrecoMedioAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/anton"
+                android:text="Preço médio de abastecimentos: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeLitrosAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de litros abastecida: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textCaroValorLitroAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="128dp"
+                android:fontFamily="@font/anton"
+                android:text="Valor por Litro mais caro: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalMaisCaroAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="160dp"
+                android:fontFamily="@font/anton"
+                android:text="Local mais caro: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textBaratoValorLitroAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="204dp"
+                android:fontFamily="@font/anton"
+                android:text="Valor por litro mais barato: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalMaisBaratoLitroAbastecimentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="236dp"
+                android:fontFamily="@font/anton"
+                android:text="Local mais barato: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMediaValorLitro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="272dp"
+                android:fontFamily="@font/anton"
+                android:text="Média de valor por litro: "
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:text="- - -     ABASTECIMENTOS     - - -"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+        <TextView
+            android:id="@+id/textAlimentacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="9dp"
+            android:fontFamily="@font/anton"
+            android:text="- - -     ALIMENTAÇÃO     - - -"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="380dp"
+            android:layout_height="503dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+            <TextView
+                android:id="@+id/textTotalFeira"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Feira:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTotalLanchonete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Lanchonetes:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTotalMercado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="78dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Mercado:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTotalPadaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Padaria:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTotalRestauntes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Restaurantes:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTotalVinicolas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="186dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto total com Vinicolas:"
+                android:textColor="@color/color_white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="230dp"
+                android:fontFamily="@font/anton"
+                android:gravity="center"
+                android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeFeiras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="270dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a feira: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeLanchonetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="306dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a lanchonete: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeMercados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="342dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a mercado: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadePadarias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="378dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a padaria: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeRestaurantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="410dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a restaurante: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeVinicolas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="446dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de idas a vinícola: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="380dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+            <TextView
+                android:id="@+id/textQuantidadeDespesasExtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de despesas extras:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMaiorGastoDespesas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior gasto com despesas extras:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMenorGastoDespesas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="84dp"
+                android:fontFamily="@font/anton"
+                android:text="Menor gasto com despesas extras:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/anton"
+            android:text="- - -     DESPESAS GERAIS    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+            <TextView
+                android:id="@+id/textQuantidadeVezesEstacionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de vezes estacionadas:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeHorasEstacionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de horas estacionadas:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textMaiorValorEstacionamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="86dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior valor de estacionamento:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textLocalMaiorValorEstacionamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/anton"
+                android:text="Local de maior valor:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textMenorValorEstacionamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="158dp"
+                android:fontFamily="@font/anton"
+                android:text="Menor valor de estacionamento:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textLocalMenorValorEstacionamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="194dp"
+                android:fontFamily="@font/anton"
+                android:text="Local de menor valor:"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/anton"
+            android:text="- - -     ESTACIONAMENTO    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-42dp"
+            android:layout_marginBottom="-32dp"
+            android:fontFamily="@font/anton"
+            android:text="- - -     HOSPEDAGEM    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
+            android:layout_width="380dp"
+            android:layout_height="906dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView37"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+            <TextView
+                android:id="@+id/textQuantidadeVezesHospedado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de vezes hospedado:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias no total:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasAirbnb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em AirBnB:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasCampingM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="134dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Camping Municipal:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasCampingP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="202dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Camping Particular:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasHostel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="270dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Hostel:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasHotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="308dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Hotel:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasPousada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="346dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Pousada:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadeDiariasResort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="384dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de diarias em Resort:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textEntrelinhasHospedagem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="424dp"
+                android:fontFamily="@font/anton"
+                android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textEntrelinhasHospedagem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="730dp"
+                android:fontFamily="@font/anton"
+                android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMaiorValordeHospedagem"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="768dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior valor de hospedagem:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalMaiorGastoHospedagem"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="806dp"
+                android:fontFamily="@font/anton"
+                android:text="Local de maior gasto:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textValorMedioHospedagem"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="844dp"
+                android:fontFamily="@font/anton"
+                android:text="Valor médio de hospedagem:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoAirbnb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="464dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em AirBnB:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoCampingM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="504dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Camping Municipal:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoCampingP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="542dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Camping Privado:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoHostel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="580dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Hostel:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoHotel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="618dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Hotel:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoPousada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="655dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Pousada:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGastoResort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="692dp"
+                android:fontFamily="@font/anton"
+                android:text="Gasto em Resort:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:text="- - -     MANUTENÇÃO    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView9"
+            android:layout_width="380dp"
+            android:layout_height="260dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37">
+
+            <TextView
+                android:id="@+id/textQuantidadeManutencoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de manutenções feitas:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMaiorValorGastoManutencao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior valor gasto: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textTipoManutencaoMaiorGasto"
+                android:layout_width="309dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/anton"
+                android:text="Tipo de manutenção de maior gasto: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textValorMedioManutencao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="192dp"
+                android:fontFamily="@font/anton"
+                android:text="Valor médio de manutenção:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView10"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView42">
+
+            <TextView
+                android:id="@+id/textQuantidadePasseio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de passeios realizados: "
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMaiorValorPasseio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="58dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior valor gasto em passeio:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textValorMedioPasseio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/anton"
+                android:text="Valor médio de passeio:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalPasseioMaiorValor"
+                android:layout_width="350dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="178dp"
+                android:fontFamily="@font/anton"
+                android:text="Local do passeio de maior valor:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textNomePasseioMaiorValor"
+                android:layout_width="352dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="98dp"
+                android:fontFamily="@font/anton"
+                android:text="Nome do passeio de maior valor:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:text="- - -     PASSEIO    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anton"
+            android:text="- - -     PEDAGIO    - - -"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView10" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView11"
+            android:layout_width="380dp"
+            android:layout_height="408dp"
+            android:layout_marginBottom="32dp"
+            app:cardBackgroundColor="@color/CorBotoes"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView45">
+
+            <TextView
+                android:id="@+id/textMaiorValorPedagio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="54dp"
+                android:fontFamily="@font/anton"
+                android:text="Maior valor gasto com pedágio:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textQuantidadePedagios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/anton"
+                android:text="Quantidade de pedágios pagos:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalMaiorValorPedagio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="92dp"
+                android:fontFamily="@font/anton"
+                android:text="Local de maior valor:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textMenorValorPedagio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/anton"
+                android:text="Menor valor gasto com pedágio:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textLocalMenorValorPedagio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="168dp"
+                android:fontFamily="@font/anton"
+                android:text="Local de menor valor:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPCTPessimas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="206dp"
+                android:fontFamily="@font/anton"
+                android:text="Porcentagem de vias péssimas:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPCTRuins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="244dp"
+                android:fontFamily="@font/anton"
+                android:text="Porcentagem de vias ruins:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPCTRegulares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="282dp"
+                android:fontFamily="@font/anton"
+                android:text="Porcentagem de vias regulares:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPCTBoas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="320dp"
+                android:fontFamily="@font/anton"
+                android:text="Porcentagem de vias boas:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPCTExcelentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="358dp"
+                android:fontFamily="@font/anton"
+                android:text="Porcentagem de vias excelentes:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:backgroundTint="@color/CorBotoes"
+            android:text="Gerar PDF
+"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar6"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar6"
+            app:layout_constraintStart_toEndOf="@+id/textView27"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Adicione mais views conforme necessário -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
