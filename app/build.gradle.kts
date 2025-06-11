@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "br.com.agoracomecouaviagem.controleioverland"
-        minSdk = 16
+        minSdk = 21 // Updated to meet Firebase Firestore requirements
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -51,8 +52,10 @@ dependencies {
     implementation ("androidx.cardview:cardview:1.0.0")
     implementation ("com.nineoldandroids:library:2.4.0")
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
-
-
+    implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-storage")
 }
 
 

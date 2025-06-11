@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "338765007386",
+    "project_id": "br.com.agoracomecouaviagem.controleioverland",
+    "storage_bucket": "afmobilefacens.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338765007386:android:1fa061cecbc91d80749fa3",
+        "android_client_info": {
+          "package_name": "br.com.agoracomecouaviagem.controleioverland"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCqq2tKR3rtj0MB-Tj-XTi4oL6XQIIEZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,25 @@
+1. Go to https://console.firebase.google.com/ and create a new project (or use an existing one).
+2. Add an Android app to your Firebase project. Use the package name: br.com.agoracomecouaviagem.controleioverland
+3. Download the google-services.json file from the Firebase Console and place it in:
+   app/google-services.json
+4. Update your Gradle files:
+   - Add the Firebase dependencies to your app-level build.gradle.kts file:
+     ```kotlin
+     implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+     implementation("com.google.firebase:firebase-firestore")
+     implementation("com.google.firebase:firebase-analytics")
+     ```
+   - Add the Google Services plugin to your project-level build.gradle.kts file:
+     ```kotlin
+     plugins {
+         id("com.google.gms.google-services") version "4.4.1" apply false
+     }
+     ```
+   - Apply the Google Services plugin in your app-level build.gradle.kts file:
+     ```kotlin
+     plugins {
+         id("com.google.gms.google-services")
+     }
+     ```
+5. Sync your project with Gradle.
+6. Test the Firebase integration by calling the `uploadPDFToFirebase` method.
